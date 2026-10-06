@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über Mich</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <h1>Über Mich</h1>
     <main>
-    <nav> 
-        <ul> 
-            <li>Name</li>
-            <li>Geburtsdatum</li>
-            <li>Geburtsort</li>
-            <li>Alter</li>
-            <li>Hobbys</li>
-        </ul>
-    </nav>
-</main>
+        <nav>
+            <ul>
+                <li>Name</li>
+                <li>Geburtsdatum</li>
+                <li>Geburtsort</li>
+                <li>Alter</li>
+                <li>Hobbys</li>
+            </ul>
+        </nav>
+    </main>
     <img src="/WMC-Szegner/2026-09-22&2026-09-29/Bild_Szegner.jpg" alt="Bild von Jakob Szegner" width=150 height=200>
 
-<footer>
-    <p>Jakob Szegner 22.09.2026</p>
-</footer>
+
+    <form>
+        <h2>Was ist dein Name?</h2>
+
+        <label for="vname">Vorname:</label><br>
+        <input type="text" id="vname" name="vname"><br>
+        <label for="nname">Nachname:</label><br>
+        <input type="text" id="nname" name="nname">
+
+        <h2>Was ist dein Geschlecht?</h2>
+
+        <input type="radio" id="maennlich" name="geschlecht" value="Maennlich">
+        <label for="maennlich">Männlich</label><br>
+        <input type="radio" id="weiblich" name="geschlecht" value="Weiblich">
+        <label for="weiblich">Weiblich</label><br>
+        <input type="radio" id="divers" name="divers" value="divers">
+        <label for="divers">Divers</label><br>
+
+        <h2>Wann hast du Geburtstag?</h2>
+        <label for="geburtstag">Geburtstag:</label>
+        <input type="date" id="geburtstag" name="geburtstag">
+
+        <h2>Lieblingsfächer?</h2>
+        <input type="checkbox" id="fach1" name="fach1" value="Englisch">
+        <label for="fach1"> Englisch</label><br>
+        <input type="checkbox" id="fach2" name="fach2" value="Deutsch">
+        <label for="fach2"> Deutsch</label><br>
+        <input type="checkbox" id="fach3" name="fach3" value="Mathe">
+        <label for="fach3"> Mathe</label><br>
+        <input type="checkbox" id="fach4" name="fach4" value="WMC">
+        <label for="fach4"> WMC</label><br>
+        <br>
+
+        <h2>Wähle ein Wahlfach aus der Liste!</h2>
+
+        <select name="wahlfach">
+            <option value="hacken">Hacken</option>
+            <option value="basketball">Basketball</option>
+            <option value="volleyball">Volleyball</option>
+            <option value="keinWahlfach" selected>Kein Wahlfach</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+    <footer>
+        <p>Jakob Szegner 22.09.2026</p>
+    </footer>
 </body>
+
 </html>
