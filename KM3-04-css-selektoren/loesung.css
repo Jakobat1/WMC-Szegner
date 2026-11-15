@@ -1,0 +1,33 @@
+/* Aufgabe KM3-04 — Beispiel 3: Prüfungsaufgabe. Das HTML bleibt unverändert. */
+
+/* a) alle section im article.testbereich, deren data-topic mit "css-adv" beginnt */
+article.testbereich section[data-topic^="css-adv"] {
+    border: 2px dashed red;
+}
+
+/* b) dritter Listeneintrag der Sektion, darin der direkte Link */
+article.testbereich section[data-topic^="css-adv"] li:nth-child(3) > a {
+    color: green;
+    font-weight: bold;
+    transition: color 1s;   /* im Grundzustand, damit sie beim Hover UND beim Verlassen läuft */
+}
+
+article.testbereich section[data-topic^="css-adv"] li:nth-child(3) > a:hover {
+    color: red;
+}
+
+/* c) Preistabelle — ohne Klassen oder IDs an den Zeilen */
+table.preise {
+    border-collapse: collapse;   /* nötig, sonst wird der Rand an <tr> nicht gezeichnet */
+}
+
+/* zweite Datenzeile = dritte Zeile, weil die Kopfzeile Zeile 1 ist */
+table.preise tr:nth-child(3) {
+    background: #fff4cc;
+    font-weight: bold;
+}
+
+/* letzte Zeile: oberer Rahmen */
+table.preise tr:last-child {
+    border-top: 2px solid #888;
+}
